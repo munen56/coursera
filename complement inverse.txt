@@ -1,0 +1,45 @@
+
+def ReverseComplement(Pattern):
+    
+    Pattern = Reverse(Pattern) # reverse all letters in a string
+    
+    
+    
+    Pattern = Complement(Pattern) # complement each letter in a string
+    
+    
+    return Pattern
+  
+  
+def Complement(Pattern):
+  
+  inter=""
+  for car in Pattern:
+    
+  
+    if car=="A":
+       inter=inter+'T'
+      
+    elif car=="T":
+       inter=inter+'A'
+  
+    elif car=="G":
+       inter=inter+'C'
+  
+    elif car=="C":
+       inter=inter+'G'
+  
+    else:
+      return "l'entré = pas seq genet"
+  Pattern=inter
+  return Pattern
+
+def Reverse(Pattern):
+  
+  inter=""
+  
+  for car in Pattern:
+    inter=car+inter
+  Pattern=inter
+  return Pattern
+

@@ -1,0 +1,66 @@
+# Assigning a dictionary with three key-value pairs to residents:
+
+
+
+
+"""
+
+
+words=[]
+#words=["aaa"]
+
+
+
+freq={"atc" :2, "atg":1,"agg":2}
+
+m = max(freq.values())
+
+
+for key in freq:
+
+       if freq[key]== m:
+          inter=[key]
+          words.append(inter)
+print words
+"""
+
+def FrequencyMap(Text, k):
+    # your code here
+    freq = {}
+    n = len(Text)
+    
+    for i in range(n-k+1):
+        Pattern = Text[i:i+k]
+        freq[Pattern] = 0
+    
+    for i in range(n-k+1):
+        Pattern = Text[i:i+k]
+        if freq[Pattern] >= 0 :
+          freq[Pattern]=freq[Pattern]+1
+      
+        
+         
+    for i in range(n-k+1):
+       Pattern = Text[i:i+k]
+      # print freq[Pattern]
+    return freq
+  
+  
+def FrequentWords(Text, k):
+    words = []
+    freq = FrequencyMap(Text, k)
+    print freq
+    m = max(freq.values())
+    print "------------"
+    print m
+    print "-------------"
+    for key in freq:
+        if freq[key]== m:
+          inter=[key]
+          words.append(inter)
+   # print (words) 
+    return words
+print FrequentWords("CACCGGGGGGGGGGGGGGCAACTTTTAGAGCACTATCGTGGTACAAATAATGCTGCCAC",3)
+
+
+
