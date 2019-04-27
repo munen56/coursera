@@ -9,3 +9,4 @@ def reverse(Pattern):
 Text="AAAACCCGGT"
 
 print (reverse(Text))
+#ligne ajouté a hennebont (entrainement git)
